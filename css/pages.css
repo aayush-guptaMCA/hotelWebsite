@@ -1,0 +1,10 @@
+﻿@import url("dining.css");
+.hp-page main { padding-top:var(--bar); padding-bottom:60px }
+.page-lead { max-width:960px; margin:auto; text-align:center; padding:clamp(50px,7vw,110px) 6% }
+.page-lead > p:last-child { max-width:600px; margin:20px auto 0 }
+.rooms { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:0 7% }
+.rooms img,.rooms video { width:100%; aspect-ratio:1.6; object-fit:cover; display:block; background:#30352e }
+.rooms article h2,.feature h2 { font-size:clamp(2rem,3.6vw,3.6rem) }
+.feature { margin:0 7% 50px; display:grid; align-items:center; grid-template-columns:1.2fr 1fr; gap:6% }
+.feature > img,.feature > video { width:100%; aspect-ratio:1.5; object-fit:cover; background:#30352e }
+@media(max-width:700px) { .rooms,.feature { grid-template-columns:1fr; gap:24px } }

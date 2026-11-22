@@ -1,0 +1,27 @@
+﻿@import url("dining.css");
+.hero { position:relative; height:100svh; min-height:350px; background:#352f23 }
+.hero video { display:block; width:100%; height:100%; object-fit:cover }
+.discover { position:absolute; bottom:18px; left:50%; transform:translateX(-50%); color:white; background:#2227; width:40px; height:40px; border:1px solid #fff9; border-radius:50%; display:grid; place-items:center; text-decoration:none; font-size:22px }
+.services,.guestbook { text-align:center }
+.service-grid { margin:40px auto 18px; display:grid; grid-template-columns:repeat(3,1fr); max-width:1200px }
+.service-grid a { display:block; padding:22px clamp(16px,3vw,50px); text-decoration:none; border-inline-start:1px solid #c5b99e; transition:background .4s,transform .4s }
+.service-grid a:first-child { border:0 }
+.service-grid a:hover,.service-grid a:focus-visible { transform:translateY(-5px); background:#ebe6d9 }
+.symbol { display:inline-grid; place-items:center; width:44px; height:44px; border:1px solid #a48b5b; border-radius:50%; margin-bottom:14px; font:24px var(--serif); color:#7f683e }
+.guestbook { background:linear-gradient(#efe8db,var(--paper)) }
+.notes { position:relative; display:grid; grid-template-columns:1fr 1fr; gap:8%; max-width:920px; margin:30px auto 18px; padding:73px 6% 20px }
+.notes svg { position:absolute; top:0; left:0; width:100%; height:60px; color:#958266 }
+.notes figure { position:relative; background:#fffdf7; padding:30px clamp(15px,2.5vw,44px); margin:0; box-shadow:0 7px 18px #43361e15; transform-origin:50% -24px; transform:rotate(-2deg); transition:transform .55s }
+.notes figure:last-child { transform:rotate(2deg) }
+.notes figure:hover { transform:rotate(0deg) translateY(2px) }
+.notes figure:before { content:''; position:absolute; background:#98856b; height:34px; width:1px; left:50%; bottom:100% }
+.notes figure:after { content:''; position:absolute; width:7px; height:7px; left:calc(50% - 3px); top:-2px; border-radius:50%; background:#ab8854 }
+.notes blockquote { margin:0 0 18px; font:italic clamp(1.08rem,1.6vw,1.4rem)/1.5 var(--serif) }
+.notes figcaption small { display:block; color:#776851 }
+@media(max-width:700px) {
+ .service-grid { grid-template-columns:1fr; margin-top:25px }
+ .service-grid a { border:0; border-top:1px solid #c5b99e }
+ .notes { gap:4%; padding:72px 0 12px }
+ .notes figure { padding:22px 10px }
+}
+@media(max-width:380px) { .guestbook { padding-inline:4% } }
