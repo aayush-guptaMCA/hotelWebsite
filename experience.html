@@ -1,31 +1,174 @@
-﻿<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Experience | Hotel President Agra</title>
-<link rel="stylesheet" href="css/header-footer.css"><link rel="stylesheet" href="css/pages.css">
-<script defer src="js/header-footer.js"></script><link rel="stylesheet" href="css/common-footer.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience | Hotel President Agra</title>
+  <link rel="stylesheet" href="css/header-footer.css?v=layout2">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/common-footer.css">
+  <script defer src="js/header-footer.js"></script>
+  <script defer src="js/experience.js"></script>
+<link rel="stylesheet" href="css/page-hero.css">
 </head>
-<body id="top" class="hp-page"><header class="hp-header">
+
+<body id="top" class="photo-page hp-page exp-page">
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="hp-header">
   <a class="hp-skip" href="#main">Skip to content</a>
   <button type="button" class="hp-toggle" aria-controls="hp-nav" aria-expanded="false">Menu</button>
   <nav id="hp-nav" class="hp-nav" aria-label="Main navigation">
-    <div><a href="index.html">Home</a>
+    <div>
+      <a href="index.html">Home</a>
       <a href="stay.html">Stay</a>
-      <a href="dine.html">Dine</a></div><span aria-hidden="true"></span><div><a href="experience.html">Experience</a>
+      <a href="dine.html">Dine</a>
+    </div>
+    <span aria-hidden="true"></span>
+    <div>
+      <a href="experience.html">Experience</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a></div>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
   <a class="hp-brand" href="index.html" aria-label="Hotel President home">
-    <img class="crest" src="img/logo.png" alt=""><img class="wordmark" src="img/texticon.png" alt="">
+    <img class="crest" src="img/logo.png" alt="">
+    <img class="wordmark" src="img/texticon.png" alt="">
   </a>
 </header>
-<main id="main"><div class="page-lead"><p class="eyebrow">Experience</p><h1>A day by the Taj</h1><p>Start with the Taj Mahal on the horizon and end on the rooftop as evening settles over Agra.</p></div><div class="feature"><img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=850&amp;q=82" alt="The Taj Mahal in Agra"><div><h2>Walk towards the West Gate</h2><p>From Purani Mandi, head towards the Taj West Gate to explore the monument up close.</p><a class="ink-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+President+Fatehabad+Road+Tajganj+Agra">Find the hotel on Maps</a></div></div><div class="feature"><video controls playsinline preload="metadata" src="video/_president -agra-rooftop (480).mp4" poster="img/Taj Mahal Rooftop Dining at Dusk.png"></video><div><h2>Evening on the rooftop</h2><p>Return for a vegetarian meal overlooking the Agra skyline.</p><a class="ink-link" href="dine.html">Discover Mahal View</a></div></div></main>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main id="main">
+
+  <!-- ── HERO BANNER ── -->
+  <section class="page-hero" aria-labelledby="experience-title">
+    <img class="page-hero-image" src="img/experience1.png" alt="" fetchpriority="high">
+    <div class="page-hero-shade"></div>
+    <div class="page-hero-copy">
+      <p class="kicker">Experiences</p>
+      <h1 id="experience-title">Beyond the <em>Ordinary.</em></h1>
+      <p>Discover moments that stay with you long after your journey ends.</p>
+    </div>
+    <a class="hero-scroll" href="#experiences" aria-label="Explore the experiences"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
+  </section>
+
+  <!-- ── SECTION INTRO ── -->
+  <section class="exp-intro" id="experiences">
+    <p class="exp-intro__tag">Make Every Moment Count</p>
+    <h2 class="exp-intro__heading">A Stay Worth Remembering</h2>
+    <p class="exp-intro__text">From serene mornings to enchanting rooftop evenings, discover experiences crafted to make your visit truly special.</p>
+  </section>
+
+  <!-- ── EXPERIENCE CARDS ── -->
+  <div class="exp-cards">
+
+    <!-- 01 — Dining Above the City -->
+    <article class="exp-card">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience2.png" alt="Rooftop dining above Agra skyline">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">01 — Dine</p>
+        <h3 class="exp-card__title">Dining Above the City</h3>
+        <p class="exp-card__desc">Savour exceptional flavours under the open sky with the Taj Mahal on the horizon. Our rooftop restaurant pairs authentic Mughlai and continental cuisine with unforgettable panoramic views of the Agra skyline.</p>
+        <a class="exp-card__link" href="dine.html">Explore Dining</a>
+      </div>
+    </article>
+
+    <!-- 02 — Luxury Meets Comfort -->
+    <article class="exp-card exp-card--reverse">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience3.png" alt="Luxury hotel suite with elegant interiors">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">02 — Stay</p>
+        <h3 class="exp-card__title">Luxury Meets Comfort</h3>
+        <p class="exp-card__desc">Step into rooms designed for restful elegance — plush bedding, warm lighting, and thoughtful details that turn a night's stay into a retreat. Every corner whispers comfort.</p>
+        <a class="exp-card__link" href="stay.html">View Rooms</a>
+      </div>
+    </article>
+
+    <div class="exp-divider"></div>
+
+    <!-- 03 — The Magic of Agra -->
+    <article class="exp-card">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience4.png" alt="Taj Mahal through Mughal arch">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">03 — Discover</p>
+        <h3 class="exp-card__title">The Magic of Agra</h3>
+        <p class="exp-card__desc">Discover a city rich in history and timeless beauty. From the first glimpse of white marble to the vibrant bazaars, Agra unfolds as a living chronicle of Mughal grandeur and Indian heritage.</p>
+        <a class="exp-card__link" href="experience.html#">Explore Agra</a>
+      </div>
+    </article>
+
+    <!-- 04 — Taj Yamuna Point -->
+    <article class="exp-card exp-card--reverse">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience5.png" alt="Taj Mahal view from Yamuna riverbank">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">04 — Explore</p>
+        <h3 class="exp-card__title">Taj Yamuna Point</h3>
+        <p class="exp-card__desc">Walk down to the Yamuna riverbank for a perspective few travellers witness — the Taj Mahal mirrored in still water at sunrise. A photographer's dream and a moment of serene solitude.</p>
+        <a class="exp-card__link" href="experience.html#">Discover the View</a>
+      </div>
+    </article>
+
+    <div class="exp-divider"></div>
+
+    <!-- 05 — Agra Fort -->
+    <article class="exp-card">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience6.png" alt="Agra Fort red sandstone walls">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">05 — Heritage</p>
+        <h3 class="exp-card__title">Agra Fort</h3>
+        <p class="exp-card__desc">Explore the majestic red-sandstone fortress that served as the seat of Mughal emperors for generations. Within its walls lie palaces, audience halls, and hidden gardens that echo centuries of royal life.</p>
+        <a class="exp-card__link" href="experience.html#">Explore the Fort</a>
+      </div>
+    </article>
+
+    <!-- 06 — Moments That Matter -->
+    <article class="exp-card exp-card--reverse">
+      <div class="exp-card__img-wrap">
+        <img class="exp-card__img" loading="lazy" src="img/experience7.png" alt="Memorable moments at Hotel President">
+      </div>
+      <div class="exp-card__body">
+        <p class="exp-card__meta">06 — Cherish</p>
+        <h3 class="exp-card__title">Moments That Matter</h3>
+        <p class="exp-card__desc">Whether it's a candlelit dinner on the terrace, a quiet morning chai with a Taj view, or the warmth of our staff's welcome — these are the moments you'll carry home with you.</p>
+        <a class="exp-card__link" href="contact.html">Plan Your Stay</a>
+      </div>
+    </article>
+
+  </div><!-- .exp-cards -->
+
+  <!-- ── CTA BANNER ── -->
+  <section class="exp-cta">
+    <img class="exp-cta__bg" loading="lazy" src="img/experience1.png" alt="">
+    <div class="exp-cta__content">
+      <h2 class="exp-cta__heading">Begin Your Journey</h2>
+      <p class="exp-cta__text">Every stay at Hotel President is more than a visit — it's a story waiting to be lived. Let Agra reveal its magic to you.</p>
+      <a class="exp-cta__btn" href="contact.html">Book Your Experience</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="hp-footer home-footer">
   <svg aria-hidden="true" class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 45C120 0 240 0 360 45S600 90 720 45S960 0 1080 45S1320 90 1440 45V100H0Z"/></svg>
   <div class="footer-grid">
     <div class="footer-about"><a class="footer-logo" href="#top"><img src="img/logo.png" alt="Hotel President Agra"></a><p>A warm welcome in Tajganj. Restful rooms, rooftop meals and the Taj Mahal on the horizon.</p><a href="tel:+917565900945">+91 75659 00945</a><a href="mailto:hotelpresidentagra@gmail.com">hotelpresidentagra@gmail.com</a><address>Fatehabad Road, Purani Mandi<br>Near Kailash Talkies, Taj West Gate<br>Tajganj, Agra 282001</address></div>
     <nav aria-label="Footer navigation"><h3>Navigate</h3><a href="index.html">Home</a><a href="about.html">About us</a><a href="stay.html">Rooms &amp; stays</a><a href="dine.html">Rooftop dining</a><a href="contact.html">Contact us</a></nav>
     <nav aria-label="Explore the hotel"><h3>Explore</h3><a href="experience.html">Around Agra</a><a href="index.html#services">Hotel comforts</a><a href="index.html#gallery">Photo gallery</a><a href="index.html#guest-stories">Guest stories</a><a href="menu/86a4579330674646b5d7f6d1be65fa03.pdf">Dining menu</a></nav>
-    <div class="footer-glimpses"><h3>A glimpse of your stay</h3><a class="footer-thumbnails" href="index.html#gallery" aria-label="Explore the hotel gallery"><img loading="lazy" src="img/RESTRA.jpg" alt="Rooftop dining"><img loading="lazy" src="img/112.jpeg" alt="Double room"><img loading="lazy" src="img/twin.jpeg" alt="Twin room"><img loading="lazy" src="img/FOUR BED.jpeg" alt="Family room"><img loading="lazy" src="img/Taj Mahal Rooftop Dining at Dusk.png" alt="Taj Mahal view"><img loading="lazy" src="img/DLX R.avif" alt="Deluxe room"></a><div class="hp-social"><a href="https://wa.me/917565900945" aria-label="Contact on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7l-4 1 1.1-3.8A8 8 0 1 1 20 11.5Z M8.5 8q-1 4 6 7l1.2-1.6-2-1.1-.8.8q-2-1-3-3l.8-.7-1-2Z"/></svg></a><a href="https://www.google.com/travel/hotels/entity/ChoIq8n-6ZS09ZvRARoNL2cvMTFoemMwd2RzdhAB" aria-label="Hotel President on Google"><b aria-hidden="true">G</b></a><a href="mailto:hotelpresidentagra@gmail.com" aria-label="Email Hotel President"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg></a></div>
+    <div class="footer-glimpses"><h3>A glimpse of your stay</h3><a class="footer-thumbnails" href="index.html#gallery" aria-label="Explore the hotel gallery"><img loading="lazy" src="img/RESTRA.jpg" alt="Rooftop dining"><img loading="lazy" src="img/112.jpeg" alt="Double room"><img loading="lazy" src="img/twin.jpeg" alt="Twin room"><img loading="lazy" src="img/FOUR BED.jpeg" alt="Family room"><img loading="lazy" src="img/Taj Mahal Rooftop Dining at Dusk.png" alt="Taj Mahal view"><img loading="lazy" src="img/DLX R.png" alt="Deluxe room"></a><div class="hp-social"><a href="https://wa.me/917565900945" aria-label="Contact on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7l-4 1 1.1-3.8A8 8 0 1 1 20 11.5Z M8.5 8q-1 4 6 7l1.2-1.6-2-1.1-.8.8q-2-1-3-3l.8-.7-1-2Z"/></svg></a><a href="https://www.google.com/travel/hotels/entity/ChoIq8n-6ZS09ZvRARoNL2cvMTFoemMwd2RzdhAB" aria-label="Hotel President on Google"><b aria-hidden="true">G</b></a><a href="mailto:hotelpresidentagra@gmail.com" aria-label="Email Hotel President"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg></a></div>
   </div>
   </div><div class="footer-bottom"><span>Hotel President · Agra</span><a href="#top">Back to top</a></div>
 </footer>
-</body></html>
+
+</body>
+</html>

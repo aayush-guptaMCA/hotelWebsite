@@ -1,0 +1,88 @@
+﻿.stay-page { --serif:"Cormorant Garamond",Georgia,serif; background:#000; color:#f7efe4 }
+.stay-wrap { width:var(--site-width); margin-inline:auto }
+.stay-section { padding-block:clamp(60px,7vw,108px) }
+.stay-intro { margin-bottom:clamp(28px,3vw,48px); text-align:center }
+.eyeline,.stay-button { font-size:.8rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase }
+.eyeline { color:#dfb778; margin:0 0 10px }
+.stay-page main h2 { margin:0; font:500 clamp(2.7rem,5vw,4.6rem)/1.06 var(--serif); letter-spacing:-.04em }
+.stay-page main h2 em { font-weight:400 }
+.stay-button { display:inline-flex; background:#e1bb7c; color:#111; padding:15px 26px; margin-top:14px; text-decoration:none }
+.stay-button:hover { background:#f4d9aa }
+.rooms-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px }
+.room-card { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); overflow:hidden; border:1px solid #3c342a; border-radius:7px; background:#111 }
+.room-cover { display:block; width:100%; height:clamp(260px,24vw,325px); object-fit:cover }
+.room-details { padding:clamp(16px,2vw,30px); align-self:center; min-width:0 }
+.room-details h3,.films-grid figcaption { margin:0; font:500 clamp(1.55rem,2.3vw,2.25rem)/1.1 var(--serif) }
+.room-specs { list-style:none; padding:0; margin:14px 0; color:#e1d9ce }
+.room-specs li { position:relative; padding-left:17px; margin:.4em 0; line-height:1.4 }
+.room-specs li::before { content:""; position:absolute; top:.52em; left:1px; width:5px; height:5px; border:1px solid #d8b47d; transform:rotate(45deg) }
+.tour-close { cursor:pointer; width:fit-content; border:1px solid #a68a61; padding:6px 12px; font-size:.88rem; color:#f3e2c7 }
+.comforts,.room-totals { background:#000; border-block:1px solid #3c342a }
+.comfort-layout ul,.room-totals { display:flex; align-items:center; justify-content:space-between; gap:16px; list-style:none; padding-block:22px; padding-left:0; margin-block:0 }
+.comfort-layout li,.room-totals li { flex:1; text-align:center; line-height:1.45 }
+.comfort-layout li+li,.room-totals li+li { border-left:1px solid #463e32 }
+.room-totals strong { display:block; color:#e1bb7c; font:500 2rem/1.2 var(--serif) }
+.tour-banner { border-block:1px solid #524532 }
+.tour-poster { display:grid; grid-template-columns:44% 56%; align-items:center; min-height:clamp(300px,28vw,420px); padding:40px var(--site-inset); background:linear-gradient(90deg,#000 0%,#000e 25%,#0008 55%,#0002),url("../img/stay.png") center 55%/cover }
+.tour-copy { max-width:420px }
+.tour-copy .eyeline { margin-bottom:12px }
+.tour-copy p:not(.eyeline) { max-width:32ch; color:#e5dcd0 }
+.tour-copy .stay-button { border:0; cursor:pointer; margin:0 }
+.tour-badge { justify-self:center; display:grid; align-content:center; width:clamp(95px,12vw,155px); aspect-ratio:1; border-radius:50%; border:1px dashed #e3c18a; outline:1px solid #ffffff50; outline-offset:5px; background:#080808ab; color:#fff4dd; font:500 clamp(2rem,4vw,3.6rem)/1 var(--serif); cursor:pointer }
+.tour-badge span { margin-top:7px; font:500 .68rem var(--sans); text-transform:uppercase; letter-spacing:.15em }
+.tour-stage { position:relative }
+.tour-stage[hidden],.tour-poster[hidden] { display:none }
+.tour-close { position:absolute; top:16px; right:16px; background:#000d }
+.stay-page .hp-header.compact,.stay-page .hp-header.is-open,.stay-page .is-open .hp-nav { background:#000 }
+.stay-page .page-hero-shade { background:linear-gradient(90deg,#000d,#0007 50%,#0001),linear-gradient(#0005,transparent 35%,#0006) }
+.panorama { position:relative; width:100%; height:clamp(310px,52vw,570px); background:#111 url('../img/stay1.jpg') center / auto 100% repeat-x; overflow:hidden; border-radius:8px; cursor:grab; touch-action:pan-y; }
+.panorama:active { cursor:grabbing }
+.pan-world,.pan-world canvas { width:100%; height:100%; display:block }
+.pan-tools { position:absolute; bottom:20px; right:20px; display:flex; gap:8px }
+.pan-tools[hidden] { display:none }
+.pan-tools button { width:44px; height:44px; border:1px solid #ffffff95; border-radius:50%; color:white; background:#111d; cursor:pointer; font-size:1.2rem }
+.tour-help { color:#eadbc5; text-align:center; padding:10px; margin:0 }
+.stay-films { background:#000; color:#f7ecda; padding-bottom:50px }
+.stay-films .eyeline { color:#ddba85 }
+.films-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px }
+.films-grid figure { margin:0 }
+.films-grid video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#111; border-radius:6px }
+.films-grid figcaption { margin-top:16px }
+@media(max-width:900px) {
+ .rooms-grid { grid-template-columns:1fr }
+ .room-cover { height:clamp(260px,42vw,320px) }
+ .comfort-layout ul { flex-wrap:wrap; justify-content:center }
+ .comfort-layout li { flex:0 1 auto; padding-inline:12px }
+}
+@media(max-width:650px) {
+ .films-grid { grid-template-columns:1fr }
+ .room-cover { height:270px }
+ .room-details { padding:14px }
+ .tour-poster { grid-template-columns:2fr 1fr; gap:12px; background-position:60% center }
+ .room-totals { flex-wrap:wrap; justify-content:center }
+ .room-totals li { flex:1 1 25%; font-size:.85rem }
+}
+@media(prefers-reduced-motion:no-preference) { .stay-revealed { animation:hero-copy-in .65s ease-out both } }
+
+.room-slider { position:relative; min-width:0; align-self:center; isolation:isolate }
+.photo-open { display:block; cursor:zoom-in }
+.room-slider::after { content:""; position:absolute; inset:auto 0 0; height:22%; pointer-events:none; background:linear-gradient(transparent,#0007) }
+.slide-prev,.slide-next,.photo-back { position:absolute; z-index:1; display:grid; place-items:center; width:34px; height:34px; top:50%; transform:translateY(-50%); padding:0; border:0; border-radius:50%; background:#fffffff0; color:#181818; cursor:pointer }
+.slide-prev { left:8px }
+.slide-next { right:8px }
+.slide-prev::before,.slide-next::before,.photo-back::before { content:""; width:.5em; height:.5em; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(135deg) }
+.slide-next::before { transform:rotate(-45deg) }
+.photo-dots { display:flex; justify-content:center; align-items:center }
+.room-slider .photo-dots { position:absolute; inset:auto 0 5px; z-index:1; width:fit-content; margin:auto }
+.photo-dots :is(a,button) { display:grid; place-items:center; width:23px; height:28px; background:transparent; border:0; padding:0; cursor:pointer }
+.photo-dots :is(a,button)::before { content:""; width:8px; height:8px; border-radius:50%; background:#ffffff80; box-shadow:0 0 2px #0009 }
+.photo-dots [aria-current=true]::before { background:white }
+.photo-viewer { position:fixed; inset:0; width:100%; height:100%; max-width:none; max-height:none; box-sizing:border-box; padding:0; margin:0; border:0; color:white; background:black }
+.photo-viewer[open] { display:grid; grid-template-rows:clamp(52px,10vh,76px) minmax(0,1fr) clamp(52px,10vh,76px) }
+.photo-viewer::backdrop { background:#000 }
+html:has(.photo-viewer[open]) { overflow:hidden }
+.photo-back { position:static; transform:none; align-self:center; margin-left:12px; background:transparent; color:white; font-size:22px }
+.photo-stage { position:relative; display:grid; place-items:center; min-height:0; padding:clamp(10px,3vh,28px) clamp(12px,6vw,88px); background:#0d0d0d }
+.large-photo { display:block; width:100%; height:100%; min-height:0; object-fit:contain }
+.photo-stage button { width:clamp(36px,5vw,56px); height:clamp(36px,5vw,56px); font-size:24px; color:white; background:#000b }
+.photo-viewer > .photo-dots { align-self:start; padding-top:8px }

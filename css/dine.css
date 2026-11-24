@@ -1,16 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap");
 .hp-dine { --paper:#081113; --ink:#f6f0e5; --gold:#e1bb7c; --bar:96px; --serif:"Cormorant Garamond",Georgia,serif; --sans:"DM Sans",Arial,sans-serif; background:var(--paper); color:var(--ink) }
-.hp-dine .hp-header { background:transparent; text-shadow:0 1px 10px #0009; transition:height .35s,background .35s,box-shadow .35s }
-.hp-dine .hp-header.compact,.hp-dine .hp-header.is-open,.hp-dine .is-open .hp-nav { background:#080d0e; text-shadow:none }
-.hp-dine .hp-header.compact { height:84px; box-shadow:0 4px 20px #0003 }
-.hp-dine .hp-nav { max-width:1180px; grid-template-columns:1fr 180px 1fr }
-.hp-dine .hp-brand { width:180px }
-.hp-dine .hp-brand .crest,.hp-dine .compact .crest { opacity:1; transform:none; filter:drop-shadow(0 2px 5px #0006) }
-.hp-dine .hp-brand .wordmark { display:none }
-.hp-dine .hp-nav a { position:relative; letter-spacing:.1em; border-bottom:0; transition:color .25s }
-.hp-dine .hp-nav a:after { content:""; position:absolute; bottom:0; left:0; width:100%; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .3s }
-.hp-dine .hp-nav a:hover,.hp-dine .hp-nav a:focus-visible { color:var(--gold) }
-.hp-dine .hp-nav a:hover:after,.hp-dine .hp-nav a:focus-visible:after,.hp-dine .hp-nav a[aria-current]:after { transform:scaleX(1) }
 [hidden] { display:none!important }
 :focus-visible { outline:2px solid var(--gold); outline-offset:5px }
 button,input { font:inherit }
@@ -20,30 +8,14 @@ h1,h2,h3,h4,p { margin-top:0 }
 h1,h2,h3,h4 { font-family:var(--serif); font-weight:500 }
 h2 { font-size:clamp(2.8rem,5vw,4.6rem); line-height:1.05; letter-spacing:-.025em; margin-bottom:20px }
 h2 em { color:var(--gold); font-weight:400 }
-.wrap { width:min(1220px,88%); margin-inline:auto }
-.dine-hero { position:relative; isolation:isolate; min-height:680px; height:88svh; max-height:1000px; display:flex; align-items:center; overflow:hidden }
-.dine-hero-image,.dine-hero-shade { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2 }
-.dine-hero-image { animation:hero-settle 1.7s ease-out both }
-.dine-hero-shade { z-index:-1; background:linear-gradient(90deg,#03090bd9 0%,#03090b80 50%,#03090b10 100%),linear-gradient(180deg,#0005,transparent 35%,#0006) }
-.dine-hero-copy { width:min(1220px,88%); margin:60px auto 0; padding-block:80px 110px }
-.kicker { font-size:.79rem; text-transform:uppercase; letter-spacing:.23em; color:var(--gold); margin-bottom:20px }
-.dine-hero h1 { font-size:clamp(3.3rem,6.1vw,6rem); line-height:1.04; letter-spacing:-.035em; margin:0 0 25px; max-width:950px }
-.dine-hero h1 em { font-weight:400; color:#eccc97 }
-.dine-hero-copy>p:not(.kicker) { color:#e7dfd0; font-size:1.05rem; line-height:1.85; max-width:590px }
-.dine-hero-copy>* { animation:hero-copy-in .85s cubic-bezier(.2,.65,.3,1) both }
-.dine-hero-copy>h1 { animation-delay:.1s }
-.dine-hero-copy>p:not(.kicker) { animation-delay:.2s }
-.dine-hero-copy>.hero-actions { animation-delay:.3s }
+.wrap { width:var(--site-width); margin-inline:auto }
 .hero-actions { display:flex; gap:14px; margin-top:33px; flex-wrap:wrap }
 .dine-button { min-height:48px; display:inline-flex; justify-content:center; align-items:center; padding:14px 25px; border:1px solid var(--gold); background:var(--gold); color:#111714; font:600 .76rem/1.5 var(--sans); text-transform:uppercase; letter-spacing:.12em; text-decoration:none; transition:background .3s,color .3s,transform .3s,box-shadow .3s }
 .dine-button:hover { background:#f1d5a8; transform:translateY(-3px); box-shadow:0 7px 22px #0003 }
 .dine-button.outline { color:#fff8ed; border-color:#ffffff65; background:#ffffff05 }
 .dine-button.outline:hover { background:var(--gold); border-color:var(--gold); color:#101510 }
-.hero-caption { position:absolute; bottom:28px; left:6%; right:6%; display:flex; justify-content:space-between; gap:80px; font-size:.7rem; text-transform:uppercase; letter-spacing:.14em; color:#e6decc }
-.hero-scroll { position:absolute; bottom:19px; left:50%; transform:translateX(-50%); width:44px; height:44px; display:grid; place-items:center; border:1px solid #fff8; border-radius:50%; color:white; background:#0003; transition:background .3s }
-.hero-scroll:hover { background:#a78446 }
-.hero-scroll svg,.back-top svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round }
-.dining-hours { display:flex; justify-content:center; gap:45px; align-items:center; flex-wrap:wrap; padding:23px 6%; background:#0d191a; border-bottom:1px solid #d3ad6826; font-size:.85rem; color:#e5ddcd }
+.back-top svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round }
+.dining-hours { display:flex; justify-content:center; gap:45px; align-items:center; flex-wrap:wrap; padding:23px var(--site-inset); background:#0d191a; border-bottom:1px solid #d3ad6826; font-size:.85rem; color:#e5ddcd }
 .dining-hours>div { display:flex; align-items:center; gap:12px }
 .dining-hours span:not(.veg-symbol) { color:#a5a89e }
 .veg-symbol { display:inline-block; width:15px; height:15px; border:1px solid #77a87a; position:relative; flex-shrink:0 }
@@ -114,7 +86,7 @@ h2 em { color:var(--gold); font-weight:400 }
 .menu-footnote { padding:25px 28px; border:1px solid #d3ad6830; background:#d3ad6805; margin-top:25px; color:#a8b0a5; font-size:.8rem }
 .menu-footnote p { margin:0 }
 .menu-footnote p+p { margin-top:8px }
-.rooftop-invitation { display:grid; grid-template-columns:1fr 1fr; background:#0f1b1c; margin:0 auto 30px; max-width:1440px }
+.rooftop-invitation { display:grid; grid-template-columns:1fr 1fr; background:#0f1b1c; margin:0 auto 30px; width:var(--site-width) }
 .rooftop-invitation>img { width:100%; height:530px; object-fit:cover }
 .invitation-copy { padding:60px clamp(25px,5vw,85px); align-self:center }
 .invitation-copy h2 { font-size:clamp(2.6rem,3.9vw,3.8rem) }
@@ -135,9 +107,6 @@ h2 em { color:var(--gold); font-weight:400 }
 .image-unavailable { position:relative; background:radial-gradient(ellipse at center,#30412d,#0e1c1c) }
 .image-unavailable>img { visibility:hidden }
 .image-unavailable:before { content:"Mahal View"; position:absolute; top:25%; left:10%; right:10%; color:#d6b47b; text-align:center; font:italic 1.4rem var(--serif) }
-@keyframes hero-settle { from { transform:scale(1.035) } to { transform:scale(1) } }
-@keyframes hero-copy-in { from { opacity:0; transform:translateY(20px) } to { opacity:1; transform:translateY(0) } }
-@media(min-width:1600px) { .dine-hero h1 { font-size:6.7rem } }
 @media(max-width:1050px) {
  .menu-browser { grid-template-columns:160px minmax(0,1fr); gap:25px }
  .menu-list { column-gap:24px }
@@ -150,9 +119,6 @@ h2 em { color:var(--gold); font-weight:400 }
  .dining-hours { gap:25px }
 }
 @media(max-width:800px) {
- .hp-dine .hp-nav { grid-template-columns:1fr 150px 1fr; padding-inline:12px }
- .hp-dine .hp-nav a { font-size:.7rem }
- .dine-hero { height:85svh; min-height:610px }
  .dining-hours { gap:14px 25px; font-size:.77rem }
  .menu-browser { display:block }
  .menu-sidebar { position:static; padding:0 0 22px }
@@ -173,15 +139,6 @@ h2 em { color:var(--gold); font-weight:400 }
  .invitation-copy { padding:50px 6% }
 }
 @media(max-width:700px) {
- .hp-dine { --bar:82px }
- .hp-dine .hp-header.compact { height:76px }
- .hp-dine .hp-brand { width:155px }
- .dine-hero-copy { padding-block:100px 95px; margin-top:0 }
- .dine-hero-copy>p:not(.kicker) { font-size:.95rem }
- .kicker { font-size:.68rem; letter-spacing:.16em }
- .dine-hero h1 { font-size:clamp(3.1rem,8.5vw,4.5rem) }
- .hero-caption { bottom:25px; gap:10px; flex-direction:column; max-width:75%; font-size:.6rem }
- .hero-scroll { left:auto; right:6%; transform:none; bottom:26px }
  .dining-hours { justify-content:flex-start }
  .dining-hours>div:first-child { width:100% }
  .menu-section { padding-top:60px }
@@ -202,8 +159,6 @@ h2 em { color:var(--gold); font-weight:400 }
  .back-top { right:15px; bottom:15px }
 }
 @media(max-width:390px) {
- .dine-hero { min-height:660px }
- .dine-hero h1 { font-size:2.9rem }
  .hero-actions { gap:10px }
  .dine-button { padding:13px 17px; font-size:.68rem }
  .category-heading { grid-template-columns:minmax(0,1fr) 85px; gap:12px }
@@ -214,6 +169,5 @@ h2 em { color:var(--gold); font-weight:400 }
  .menu-footnote { padding:20px }
 }
 @media(prefers-reduced-motion:reduce) {
- .dine-hero-image,.dine-hero-copy>* { animation:none }
  .dine-button:hover,.featured-dish:hover>img,.featured-dish:focus-visible>img,.category-heading:hover img { transform:none }
 }

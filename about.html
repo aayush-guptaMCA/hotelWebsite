@@ -1,9 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About | Hotel President Agra</title>
-<link rel="stylesheet" href="css/header-footer.css"><link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/header-footer.css?v=layout2"><link rel="stylesheet" href="css/about.css">
 <script defer src="js/header-footer.js"></script><link rel="stylesheet" href="css/common-footer.css">
+<script defer src="js/about.js"></script><link rel="stylesheet" href="css/page-hero.css">
 </head>
-<body id="top" class="hp-page"><header class="hp-header">
+<body id="top" class="photo-page hp-page"><header class="hp-header">
   <a class="hp-skip" href="#main">Skip to content</a>
   <button type="button" class="hp-toggle" aria-controls="hp-nav" aria-expanded="false">Menu</button>
   <nav id="hp-nav" class="hp-nav" aria-label="Main navigation">
@@ -17,14 +18,73 @@
     <img class="crest" src="img/logo.png" alt=""><img class="wordmark" src="img/texticon.png" alt="">
   </a>
 </header>
-<main id="main"><div class="page-lead"><p class="eyebrow">About</p><h1>At home in Tajganj</h1><p>Hotel President is a 31-room hotel on Fatehabad Road, near Kailash Talkies and the Taj Mahal’s West Gate.</p></div><div class="feature"><img loading="lazy" src="img/Taj Mahal Rooftop Dining at Dusk.png" alt="Mahal View rooftop at dusk"><div><h2>A hotel with a view</h2><p>Look out towards the Taj Mahal from the hotel. Upstairs, Mahal View brings residents and visitors together over a vegetarian meal.</p><a class="ink-link" href="stay.html">Find your room</a></div></div></main>
+<main id="main">
+  <section class="page-hero" aria-labelledby="about-title">
+    <img class="page-hero-image" src="img/about3.png" alt="" fetchpriority="high">
+    <div class="page-hero-shade"></div>
+    <div class="page-hero-copy">
+      <p class="kicker">Hotel President &middot; Agra</p>
+      <h1 id="about-title">At home in <em>Tajganj.</em></h1>
+      <p>A stay by the Taj Mahal, with a table waiting on the rooftop.</p>
+    </div>
+    <a class="hero-scroll" href="#our-hotel" aria-label="Discover our hotel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a>
+  </section>
+
+  <section class="story wrap" id="our-hotel" aria-labelledby="story-title">
+    <div class="photo-pair" data-reveal>
+      <img src="img/about1.webp" alt="A glimpse inside the hotel" loading="lazy">
+      <img src="img/about2.webp" alt="Another view of the hotel interiors" loading="lazy">
+    </div>
+    <div data-reveal>
+      <p class="label">About our hotel</p>
+      <h2 id="story-title">A quiet stay near<br>the <em>Taj Mahal.</em></h2>
+      <p>On Fatehabad Road, close to the Taj Mahal’s West Gate, Hotel President welcomes you to Tajganj. Settle into one of our 31 rooms before heading out to explore Agra.</p>
+      <p>When you return, order lunch in your room or join us upstairs at Mahal View for a vegetarian dinner overlooking the Taj.</p>
+      <a class="story-link" href="stay.html">Explore our rooms</a>
+    </div>
+  </section>
+
+  <section class="reviews" aria-label="Guest ratings and reviews">
+    <div class="review-layout wrap">
+      <div class="rating">
+        <h2 class="label">Guest rating</h2>
+        <strong>3.9<small> / 5</small></strong>
+        <span class="stars" aria-hidden="true">★★★★☆</span>
+        <a href="https://www.makemytrip.com/hotels/hotel_president-details-agra.html">500+ ratings on MakeMyTrip</a>
+      </div>
+      <div class="review-content">
+        <span class="quote-symbol" aria-hidden="true">“</span>
+        <div class="slides">
+          <figure><blockquote>We had a comfortable stay at Hotel President Agra with our family.</blockquote><figcaption>Dinesh B. &nbsp;·&nbsp; MakeMyTrip</figcaption></figure>
+          <figure hidden><blockquote>Service is good and the location was excellent staff very helpful</blockquote><figcaption>Nicky_Thailand &nbsp;·&nbsp; Trip.com</figcaption></figure>
+          <figure hidden><blockquote>Clean rooms are the USP of this Hotel. Must stay here. Location is good. Staff is good.</blockquote><figcaption>Nikhil Vyas &nbsp;·&nbsp; Tripadvisor</figcaption></figure>
+        </div>
+        <div class="review-controls" hidden><button class="rotation" type="button">Pause</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facilities wrap" aria-labelledby="facilities-title">
+    <header data-reveal><h2 id="facilities-title">Hotel <em>facilities.</em></h2><p>From arrival to dinner with a view, make yourself at home.</p></header>
+    <div class="facility-layout">
+      <div class="room-film" data-reveal><video width="854" height="480" autoplay muted playsinline loop disablepictureinpicture preload="metadata" poster="img/112.jpeg" aria-label="Video tour of Hotel President rooms"><source src="video/President-Only Rooms (480).mp4" type="video/mp4"><a href="video/President-Only Rooms (480).mp4">Watch the room tour</a></video></div>
+      <div class="facility-cards">
+        <article data-reveal><h3>Rooms</h3><strong>31</strong><p>Luxury rooms</p></article>
+        <article data-reveal><h3>Yearly visitors</h3><strong>8,500<span>+</span></strong><p>Guests each year</p></article>
+        <article data-reveal><h3>On arrival</h3><h4>Spacious parking</h4><p>A large on-site parking area for guests.</p></article>
+        <article data-reveal><h3>Location</h3><h4>Near the Taj Mahal</h4><p>Stay close to the West Gate in Tajganj.</p></article>
+        <article class="dining-card" data-reveal><h3>Lunch &amp; dinner</h3><h4>In-room or on the rooftop</h4><p>Dine in your room or enjoy a Taj Mahal view at our <a href="dine.html">Mahal View restaurant</a>.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
 <footer class="hp-footer home-footer">
   <svg aria-hidden="true" class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 45C120 0 240 0 360 45S600 90 720 45S960 0 1080 45S1320 90 1440 45V100H0Z"/></svg>
   <div class="footer-grid">
     <div class="footer-about"><a class="footer-logo" href="#top"><img src="img/logo.png" alt="Hotel President Agra"></a><p>A warm welcome in Tajganj. Restful rooms, rooftop meals and the Taj Mahal on the horizon.</p><a href="tel:+917565900945">+91 75659 00945</a><a href="mailto:hotelpresidentagra@gmail.com">hotelpresidentagra@gmail.com</a><address>Fatehabad Road, Purani Mandi<br>Near Kailash Talkies, Taj West Gate<br>Tajganj, Agra 282001</address></div>
     <nav aria-label="Footer navigation"><h3>Navigate</h3><a href="index.html">Home</a><a href="about.html">About us</a><a href="stay.html">Rooms &amp; stays</a><a href="dine.html">Rooftop dining</a><a href="contact.html">Contact us</a></nav>
     <nav aria-label="Explore the hotel"><h3>Explore</h3><a href="experience.html">Around Agra</a><a href="index.html#services">Hotel comforts</a><a href="index.html#gallery">Photo gallery</a><a href="index.html#guest-stories">Guest stories</a><a href="menu/86a4579330674646b5d7f6d1be65fa03.pdf">Dining menu</a></nav>
-    <div class="footer-glimpses"><h3>A glimpse of your stay</h3><a class="footer-thumbnails" href="index.html#gallery" aria-label="Explore the hotel gallery"><img loading="lazy" src="img/RESTRA.jpg" alt="Rooftop dining"><img loading="lazy" src="img/112.jpeg" alt="Double room"><img loading="lazy" src="img/twin.jpeg" alt="Twin room"><img loading="lazy" src="img/FOUR BED.jpeg" alt="Family room"><img loading="lazy" src="img/Taj Mahal Rooftop Dining at Dusk.png" alt="Taj Mahal view"><img loading="lazy" src="img/DLX R.avif" alt="Deluxe room"></a><div class="hp-social"><a href="https://wa.me/917565900945" aria-label="Contact on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7l-4 1 1.1-3.8A8 8 0 1 1 20 11.5Z M8.5 8q-1 4 6 7l1.2-1.6-2-1.1-.8.8q-2-1-3-3l.8-.7-1-2Z"/></svg></a><a href="https://www.google.com/travel/hotels/entity/ChoIq8n-6ZS09ZvRARoNL2cvMTFoemMwd2RzdhAB" aria-label="Hotel President on Google"><b aria-hidden="true">G</b></a><a href="mailto:hotelpresidentagra@gmail.com" aria-label="Email Hotel President"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg></a></div>
+    <div class="footer-glimpses"><h3>A glimpse of your stay</h3><a class="footer-thumbnails" href="index.html#gallery" aria-label="Explore the hotel gallery"><img loading="lazy" src="img/RESTRA.jpg" alt="Rooftop dining"><img loading="lazy" src="img/112.jpeg" alt="Double room"><img loading="lazy" src="img/twin.jpeg" alt="Twin room"><img loading="lazy" src="img/FOUR BED.jpeg" alt="Family room"><img loading="lazy" src="img/Taj Mahal Rooftop Dining at Dusk.png" alt="Taj Mahal view"><img loading="lazy" src="img/DLX R.png" alt="Deluxe room"></a><div class="hp-social"><a href="https://wa.me/917565900945" aria-label="Contact on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7l-4 1 1.1-3.8A8 8 0 1 1 20 11.5Z M8.5 8q-1 4 6 7l1.2-1.6-2-1.1-.8.8q-2-1-3-3l.8-.7-1-2Z"/></svg></a><a href="https://www.google.com/travel/hotels/entity/ChoIq8n-6ZS09ZvRARoNL2cvMTFoemMwd2RzdhAB" aria-label="Hotel President on Google"><b aria-hidden="true">G</b></a><a href="mailto:hotelpresidentagra@gmail.com" aria-label="Email Hotel President"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg></a></div>
   </div>
   </div><div class="footer-bottom"><span>Hotel President · Agra</span><a href="#top">Back to top</a></div>
 </footer>

@@ -1,4 +1,5 @@
-﻿:root { --paper:#faf7f0; --ink:#2d3029; --gold:#c3a77a; --bar:88px; --serif:Baskervville,Georgia,serif; --sans:"DM Sans",Arial,sans-serif }
+:root { --site-inset:max(18px, 4%, calc((100% - 1640px) / 2)); --site-width:calc(100% - var(--site-inset) - var(--site-inset)) }
+:root { --paper:#faf7f0; --ink:#2d3029; --gold:#c3a77a; --bar:88px; --serif:Baskervville,Georgia,serif; --sans:"DM Sans",Arial,sans-serif }
 * { box-sizing:border-box }
 html { scroll-behavior:smooth; scroll-padding-top:var(--bar) }
 body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 var(--sans) }
