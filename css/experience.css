@@ -1,15 +1,13 @@
 /* ══════════════════════════════════════════════════
    EXPERIENCE PAGE — Hotel President Agra
-   Dark luxurious theme · scroll animations · hovers
    ══════════════════════════════════════════════════ */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap");
 
 /* ---------- BASE OVERRIDES ---------- */
 .exp-page {
   --serif: "Cormorant Garamond", Georgia, serif;
-  --gold: #a7834e;
-  background: #111111;
-  color: #e8e2d6
+  --gold: var(--accent-gold-dark);
+  background: var(--bg-primary);
+  color: var(--text-primary)
 }
 
 @keyframes fadeUp {
@@ -22,7 +20,7 @@
 /* ---------- SECTION INTRO ---------- */
 .exp-intro {
   text-align: center;
-  padding: clamp(70px, 10vw, 130px) 7% clamp(50px, 8vw, 100px);
+  padding: var(--section-space) 7%;
   max-width: 860px;
   margin: auto;
 }
@@ -43,7 +41,7 @@
 }
 
 .exp-intro__text {
-  color: #a6a29a;
+  color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 620px;
@@ -54,19 +52,18 @@
 .exp-cards {
   width: var(--site-width);
   margin-inline: auto;
-  padding-bottom: 80px;
+  padding-bottom: 10px;
 }
 
 .exp-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(30px, 5vw, 80px);
+  gap:0;
   align-items: center;
-  margin-bottom: clamp(60px, 10vw, 120px);
-  /* Scroll-reveal prep */
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity .85s ease, transform .85s ease;
+  margin-bottom: clamp(24px, 4vw, 54px);
+  background:var(--bg-secondary);
+  border:1px solid var(--border-color);
+
 }
 
 .exp-card.is-visible {
@@ -123,7 +120,7 @@
   font-size: .78rem;
   letter-spacing: .28em;
   text-transform: uppercase;
-  color: #8a8475;
+  color: var(--accent-gold-dark);
   margin-bottom: 12px;
 }
 
@@ -136,7 +133,7 @@
 }
 
 .exp-card__desc {
-  color: #a6a29a;
+  color: var(--text-secondary);
   font-size: .98rem;
   line-height: 1.75;
   margin: 0 0 24px;
@@ -155,7 +152,7 @@
 
 .exp-card__link:hover {
   gap: 14px;
-  color: #e0c68a
+  color: var(--text-primary)
 }
 
 .exp-card__link::after {
@@ -172,12 +169,15 @@
   width: 60px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 0 auto clamp(60px, 10vw, 120px);
+  margin: 0 auto clamp(24px, 4vw, 54px);
   opacity: .5;
 }
 
 /* ---------- CTA BANNER ---------- */
 .exp-cta {
+  --gold:var(--accent-gold-light);
+  color:var(--text-light);
+  background:var(--bg-dark);
   position: relative;
   text-align: center;
   padding: clamp(80px, 12vw, 160px) 7%;
@@ -242,7 +242,7 @@
 @media(max-width:850px) {
   .exp-card {
     grid-template-columns: 1fr;
-    gap: 28px
+    gap: 0
   }
 
   .exp-card--reverse {
@@ -250,3 +250,13 @@
   }
 }
 
+
+.exp-card__img-wrap,.exp-card__img-wrap::after { border-radius:0 }
+.exp-card__body { padding:clamp(22px,4vw,60px) }
+.exp-card__link { min-height:44px }
+@media (prefers-reduced-motion:no-preference) {
+  .exp-card.is-visible { animation:hero-copy-in .55s ease-out }
+}
+@media (prefers-reduced-motion:reduce) {
+  .exp-card:hover .exp-card__img,.exp-cta:hover .exp-cta__bg { transform:none }
+}

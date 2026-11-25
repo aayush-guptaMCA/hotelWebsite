@@ -62,9 +62,16 @@
     });
     document.querySelectorAll('[data-reveal]').forEach(item => reveal.observe(item));
 
-    const player = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) video.play().catch(() => {});
+    let filmVisible = false;
+    function syncFilm() {
+      if (filmVisible && !motion.matches && !document.hidden) video.play().catch(() => {});
       else video.pause();
+    }
+    motion.addEventListener('change', syncFilm);
+    document.addEventListener('visibilitychange', syncFilm);
+    const player = new IntersectionObserver(([entry]) => {
+      filmVisible = entry.isIntersecting;
+      syncFilm();
     });
     player.observe(video);
   }

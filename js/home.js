@@ -45,25 +45,16 @@
     const canPlay = () => !paused && !document.hidden && inView && !focusWithin;
 
     const slideDuration = 5500;
-    const copyParts = hero.querySelectorAll('.hero-copy > p, .hero-copy h1 > *, .home-actions a');
+    const mobileHero = matchMedia("(max-width: 767px)");
     let zoom;
-    let entrances = [];
 
     function animateSlide() {
       zoom?.cancel();
-      entrances.forEach(animation => animation.cancel());
-      entrances = [];
       if (motion.matches || !hero.animate) return;
       zoom = slides[current].querySelector('img').animate(
-        [{ transform: 'scale(1.09)' }, { transform: 'scale(1)' }],
+        [{ transform: mobileHero.matches ? 'scale(1.08)' : 'scale(1.09)' }, { transform: 'scale(1)' }],
         { duration: slideDuration, easing: 'ease-out', fill: 'both' }
       );
-      copyParts.forEach((part, index) => {
-        entrances.push(part.animate(
-          [{ opacity: 0, translate: '0 16px' }, { opacity: 1, translate: '0 0' }],
-          { duration: 500, delay: index * 135, easing: 'ease-out', fill: 'backwards' }
-        ));
-      });
     }
     function syncPlayback() {
       clearTimeout(timer);

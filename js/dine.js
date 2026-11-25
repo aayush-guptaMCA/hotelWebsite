@@ -31,7 +31,7 @@
     active = button.dataset.categoryFilter;
     search.value = '';
     showMenu();
-    document.querySelector('#menu-search-area').scrollIntoView({behavior:'smooth',block:'start'});
+    document.querySelector('#menu-search-area').scrollIntoView({block:'start'});
   }));
   search.addEventListener('input', showMenu);
   clear.addEventListener('click', () => { search.value = ''; showMenu(); search.focus(); });

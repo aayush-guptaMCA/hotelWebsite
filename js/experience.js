@@ -22,25 +22,4 @@
     cards.forEach((c) => c.classList.add('is-visible'));
   }
 
-  /* --- Staggered reveal for intro section --- */
-  const intro = document.querySelector('.exp-intro');
-  if (intro) {
-    const introObs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          intro.style.opacity = '1';
-          intro.style.transform = 'translateY(0)';
-          introObs.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    Object.assign(intro.style, {
-      opacity: '0',
-      transform: 'translateY(40px)',
-      transition: 'opacity .9s ease, transform .9s ease',
-    });
-    introObs.observe(intro);
-  }
-
 })();

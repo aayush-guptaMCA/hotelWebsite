@@ -4,15 +4,15 @@
 .rating .label { color:#f1d4a4; }
 #main h2:not(.label) { font:400 clamp(2.7rem,5vw,4.7rem)/1.04 var(--serif); letter-spacing:-.045em; margin:0; }
 #main em { font-weight:400; }
-.story,.facilities { padding-block:clamp(65px,8vw,125px); }
+.story,.facilities { padding-block:var(--section-space); }
 .story { display:grid; grid-template-columns:1.05fr 1fr; align-items:center; gap:clamp(32px,6vw,90px); }
 .photo-pair { aspect-ratio:1.45; position:relative; }
-.photo-pair img { position:absolute; object-fit:cover; border-radius:16px; }
+.photo-pair img { position:absolute; object-fit:cover; border-radius:4px; }
 .photo-pair img:first-child { inset:0; width:90%; height:86%; }
 .photo-pair img:last-child { bottom:0; right:0; width:42%; aspect-ratio:1; box-shadow:0 16px 32px #32271635; }
 .story p:not(.label),.facilities header p,.facility-cards p { color:#54574e; }
 .story-link { display:inline-block; margin-top:.4rem; text-decoration-color:var(--accent); }
-.reviews { width:var(--site-width); margin-inline:auto; border-radius:18px; background:linear-gradient(95deg,#171c15c9,#171c15c2),url("../img/ai360-panorama-1536x768-a8c1cd0d.jpg") center/cover; color:#fffcf5; }
+.reviews { width:var(--site-width); margin-inline:auto; border-radius:4px; background:var(--bg-dark); color:#fffcf5; }
 .review-layout { display:grid; grid-template-columns:1fr 1.7fr; align-items:center; padding-block:clamp(52px,7vw,96px); gap:7%; }
 .rating { text-align:center; }
 .rating strong { display:block; font:400 clamp(4rem,7vw,7rem)/1 var(--serif); }
@@ -34,9 +34,9 @@
 .facilities { padding-bottom:clamp(110px,12vw,180px); }
 .facilities header { text-align:center; margin-bottom:36px; }
 .facility-layout,.facility-cards { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.room-film { position:sticky; top:calc(var(--bar) + 1rem); align-self:start; overflow:hidden; border-radius:16px; background:#242922; }
+.room-film { position:sticky; top:calc(var(--bar) + 1rem); align-self:start; overflow:hidden; border-radius:4px; background:#242922; }
 .room-film video { display:block; width:100%; height:auto; aspect-ratio:854/480; object-fit:contain; }
-.facility-cards article { display:flex; flex-direction:column; background:#fffdf9; border:1px solid #e6decf; border-radius:16px; padding:clamp(16px,2vw,30px); }
+.facility-cards article { display:flex; flex-direction:column; background:var(--bg-secondary); box-shadow:var(--card-shadow); border:1px solid var(--border-color); border-radius:4px; padding:clamp(16px,2vw,30px); }
 .facility-cards h3 { font:500 .83rem/1.5 var(--sans); text-transform:uppercase; letter-spacing:.1em; border-bottom:1px solid #ded6c8; margin:0 0 24px; padding-bottom:8px; }
 .facility-cards strong,.facility-cards h4 { font:400 clamp(1.4rem,2.1vw,2rem)/1.1 var(--serif); margin:0; }
 .facility-cards strong { font-size:clamp(2.4rem,4vw,4rem); }

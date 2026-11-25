@@ -1,5 +1,28 @@
-:root { --site-inset:max(18px, 4%, calc((100% - 1640px) / 2)); --site-width:calc(100% - var(--site-inset) - var(--site-inset)) }
-:root { --paper:#faf7f0; --ink:#2d3029; --gold:#c3a77a; --bar:88px; --serif:Baskervville,Georgia,serif; --sans:"DM Sans",Arial,sans-serif }
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap");
+:root {
+  --bg-primary: #F8F5EF;
+  --bg-secondary: #FFFFFF;
+  --bg-alternate: #EDE5D8;
+  --bg-dark: #111111;
+  --bg-dark-secondary: #1C1916;
+  --accent-gold: #B38A50;
+  --accent-gold-light: #E8C78B;
+  --accent-gold-dark: #8B642F;
+  --text-primary: #30251C;
+  --text-secondary: #6C655C;
+  --text-light: #F8F5EF;
+  --border-color: #DED5C7;
+  --paper: var(--bg-primary);
+  --ink: var(--text-primary);
+  --gold: var(--accent-gold-dark);
+  --bar: 88px;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --site-inset: max(18px, 5%, calc((100% - 1360px) / 2));
+  --site-width: calc(100% - var(--site-inset) - var(--site-inset));
+  --section-space: clamp(44px, 6vw, 88px);
+  --card-shadow: 0 8px 24px #30251c0b;
+}
 * { box-sizing:border-box }
 html { scroll-behavior:smooth; scroll-padding-top:var(--bar) }
 body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 var(--sans) }
